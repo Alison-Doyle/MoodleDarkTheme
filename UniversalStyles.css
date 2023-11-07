@@ -1,0 +1,51 @@
+/* Universal Elements */
+
+html {
+    --background-primary: #282a36;
+    --background-secondary: #21222C;
+    --background-tertiary: #191A21;
+    --current-line: #44475a;
+    --selection: #44475a;
+    --foreground: #f8f8f2;
+    --comment: #6272a4;
+    --cyan: #8be9fd;
+    --green: #50fa7b;
+    --orange: #ffb86c;
+    --pink: #ff79c6;
+    --purple: #bd93f9;
+    --red: #ff5555;
+    --yellow: #f1fa8c;
+}
+
+body {
+    background: var(--background-tertiary);
+}
+
+/* Side Drawer */
+.drawerheader .btn {
+    background: var(--green) !important;
+}
+
+#theme_boost-drawers-blocks {
+    background: var(--background-secondary) !important;
+}
+
+#theme_boost-drawers-blocks .card-body {
+    background: var(--background-primary);
+}
+
+#theme_boost-drawers-blocks .card-text {
+    color: var(--foreground);
+}
+
+#theme_boost-drawers-blocks h5 {
+    color: var(--foreground);
+}
+
+#theme_boost-drawers-blocks h5 .notifysuccess {
+    color: var(--green);
+}
+
+#theme_boost-drawers-blocks a {
+    color: var(--cyan);
+}
