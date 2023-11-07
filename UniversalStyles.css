@@ -1,5 +1,4 @@
 /* Universal Elements */
-
 html {
     --background-primary: #282a36;
     --background-secondary: #21222C;
@@ -20,6 +19,8 @@ html {
 body {
     background: var(--background-tertiary);
 }
+
+/* Scrollbar */
 
 /* Side Drawer */
 .drawerheader .btn {
@@ -48,4 +49,9 @@ body {
 
 #theme_boost-drawers-blocks a {
     color: var(--cyan);
+}
+
+/* Side Drawer Calender */
+.current {
+    color: var(--green) !important;
 }
