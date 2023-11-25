@@ -1,57 +1,476 @@
-/* Universal Elements */
-html {
-    --background-primary: #282a36;
-    --background-secondary: #21222C;
-    --background-tertiary: #191A21;
-    --current-line: #44475a;
-    --selection: #44475a;
-    --foreground: #f8f8f2;
-    --comment: #6272a4;
-    --cyan: #8be9fd;
-    --green: #50fa7b;
-    --orange: #ffb86c;
-    --pink: #ff79c6;
-    --purple: #bd93f9;
-    --red: #ff5555;
-    --yellow: #f1fa8c;
+:root {
+    --background-secondary: #282A36;
+    --background-primary: #44475A;
+    --text: #F8F8F2;
+    --subtle-text: #6272A4;
+    --cyan: #8BE9FD;
+    --green: #50FA7B;
+    --orange: #FFB86C;
+    --pink: #FF79C6;
+    --purple: #BD93F9;
+    --red: #FF5555;
+    --yellow: #F1FA8C;
+}
+@-moz-document url-prefix("https://vlesligo.atu.ie/login/index.php") {
+    .card-body,
+    .card-block,
+    .card {
+        background: var(--background-primary) !important;
+    }
+
+    .card-body span,
+    .card span {
+        color: var(--text) !important;
+    }
+
+    #card-login-instructions h2 {
+        color: var(--green) !important;
+    }
+
+    .card h3,
+    h5 {
+        color: var(--green) !important;
+    }
+
+    a {
+        background: var(--background-primary) !important;
+        color: var(--cyan) !important;
+        font-weight: 500 !important;
+        text-decoration: underline !important;
+    }
+
+    a:hover {
+        opacity: 0.72;
+    }
+
+    .btn {
+        background: var(--green) !important;
+        color: var(--background-secondary) !important;
+        text-decoration: none !important;
+    }
+
+    .btn:hover {
+        border: 0px solid var(--green) !important;
+        opacity: 0.72;
+    }
+
+    #yui_3_17_2_1_1699621840666_68 .btn:hover {
+        background: var(--green) !important;
+        border: 0px solid var(--green) !important;
+    }
+
+    .h2 {
+        color: var(--green) !important;
+    }
+
+    ::placeholder {
+        color: var(--purple) !important;
+        opacity: 0.72 !important;
+    }
+
+    input {
+        background: var(--background-primary) !important;
+        border: 1px solid fromRGBO(189, 147, 249, 72) !important;
+        color: var(--text) !important;
+    }
+
+    input:focus {
+        border: 1px solid var(--cyan) !important;
+    }
+
+    label {
+        color: var(--text) !important;
+    }
 }
 
-body {
-    background: var(--background-tertiary);
+@-moz-document url-prefix("https://vlesligo.atu.ie/my/") {
+    body {
+        background: var(--background-secondary);
+    }
+
+    /* Main contents of page */
+    #topofscroll {
+        background: var(--background-secondary) !important;
+    }
+
+    h1,
+    h5,
+    h6 {
+        color: var(--green) !important;
+    }
+
+    .block {
+        background: var(--background-primary);
+    }
+
+    .card {
+        background: var(--background-primary);
+    }
+
+    .card a {
+        color: var(--green) !important;
+        text-decoration: none !important;
+    }
+
+    .fa-star {
+        color: var(--green) !important;
+    }
+
+    div .text-truncate {
+        color: var(--purple) !important;
+    }
+
+    /* Designing search bar */
+    ::placeholder {
+        color: var(--purple) !important;
+    }
+
+    input {
+        background: var(--background-primary) !important;
+        border: 1px solid var(--purple) !important;
+        color: var(--text) !important;
+    }
+
+    input:focus {
+        border: 1px solid var(--cyan) !important;
+    }
+
+    .list-group-item {
+        background: var(--background-primary);
+    }
+
+    small {
+        color: var(--text);
+    }
+
+    button {
+        background: var(--green) !important;
+        color: var(--background-secondary) !important;
+    }
+
+    /* Timeline Dropdowns (Provides some styling to every other dropdown) */
+    button::after {
+        color: var(--background-secondary) !important;
+    }
+
+    .dropdown-menu {
+        background: var(--background-primary) !important;
+        border: 1px solid var(--green) !important;
+    }
+
+    .dropdown-divider {
+        background: var(--green) !important;
+    }
+
+    .dropdown-item {
+        background: var(--background-primary) !important;
+    }
+
+    .dropdown-item:hover {
+        background: var(--subtle-text) !important;
+    }
+
+    /* Timeline add submission button*/
+    .event-action a {
+        background: var(--green) !important;
+        border: none !important;
+        color: var(--background-secondary) !important;
+    }
+
+    .event-action a:hover {
+        opacity: 0.72;
+    }
+
+    /* Side drawer open/close buttons */
+    .drawertoggle {
+        border: none !important;
+    }
+
+    .drawertoggle .fa-times {
+        color: var(--background-secondary) !important;
+    }
+
+    .drawertoggle:hover {
+        opacity: 0.72;
+    }
+
+    .drawertoggle:hover .fa-times {
+        color: var(--background-secondary) !important;
+    }
+
+    .fa-chevron-left {
+        border: none !important;
+        color: var(--background-secondary) !important;
+    }
+
+    .fa-chevron-left:hover {
+        border: none !important;
+        color: var(--background-secondary) !important;
+    }
+
+    /* Side drawer */
+    #theme_boost-drawers-blocks {
+        background: var(--background-primary) !important;
+    }
+
+    #theme_boost-drawers-blocks .block {
+        border: 1px solid var(--purple) !important;
+    }
+
+    #theme_boost-drawers-blocks .card-text h5 {
+        color: var(--text) !important;
+    }
+
+    #theme_boost-drawers-blocks .card-text h5 span {
+        color: var(--cyan) !important;
+    }
+
+    #theme_boost-drawers-blocks .card-text ul li a {
+        color: var(--text) !important;
+    }
+
+    #theme_boost-drawers-blocks .card-text ul li a:hover {
+        color: var(--purple) !important;
+    }
 }
 
-/* Scrollbar */
+@-moz-document url("https://vlesligo.atu.ie/my/courses.php") {
+    #maincontent {
+        background: var(--background-secondary) !important;
+    }
 
-/* Side Drawer */
-.drawerheader .btn {
-    background: var(--green) !important;
+    .block_myoverview {
+        background: var(--background-primary) !important;
+    }
+
+    .card {
+        border: 1px solid var(--purple);
+        box-shadow: none !important;
+    }
+
+    .card-footer {
+        background: var(--background-primary) !important;
+    }
+
+    .progress-text {
+        color: var(--purple) !important;
+    }
+
+    .fa-ellipsis-v {
+        translate: -3px 8px;
+    }
 }
 
-#theme_boost-drawers-blocks {
-    background: var(--background-secondary) !important;
+@-moz-document url-prefix("https://vlesligo.atu.ie/course/") {
+    body {
+        background: var(--background-secondary);
+    }
+
+    #topofscroll {
+        background: var(--background-secondary) !important;
+    }
+
+    /* Side drawer */
+    .drawer {
+        background: var(--background-primary) !important;
+        color: var(--text) !important;
+    }
+
+    .drawer .card-body {
+        background: var(--background-primary) !important;
+        border: 1px solid var(--purple) !important;
+    }
+
+    .drawer a {
+        color: var(--cyan) !important;
+    }
+
+    /* Side drawer calender */
+    .today .day-number-circle {
+        background: var(--green) !important;
+        color: var(--background-primary) !important;
+    }
+
+    .day:hover .day-number-circle {
+        background: var(--purple) !important;
+        color: var(--background-primary) !important;
+    }
+
+    /* Nav bar styling */
+    /* Main content */
+    h1,
+    h2,
+    h3,
+    h3 span,
+    h3 strong,
+    h5,
+    h4 {
+        color: var(--green) !important;
+    }
+
+    p {
+        color: var(--text) !important;
+    }
+
+    /* Filter buttons */
+    .fa-filter {
+        color: var(--text) !important;
+    }
+
+    .filterbutton {
+        color: var(--text) !important;
+    }
+
+    .filterbutton.selected {
+        background: var(--purple) !important;
+        color: var(--background-primary) !important;
+    }
+
+    /* Other buttons */
+    button:not(.buttonhidesec0),
+    .sectionbutton {
+        background: var(--green) !important;
+        border: none !important
+    }
+
+    .sectionbutton:hover,
+    .drawertoggle:hover,
+    .btn:hover {
+        opacity: 0.72;
+    }
+
+    .fa {
+        color: var(--background-primary) !important;
+    }
+
+    /* Tile styling */
+    .photo-tile-text h3 {
+        background: var(--background-primary) !important;
+        color: var(--green) !important;
+    }
+
+    .tile {
+        border: 1px solid var(--purple) !important;
+        border-top: 6px solid var(--purple) !important;
+        box-shadow: none !important;
+    }
+
+    .tile-bg {
+        background: var(--background-primary) !important;
+    }
+
+    .activity-altcontent {
+        background: var(--background-primary) !important;
+    }
+
+    /* Course and tile content */
+    .course-content {
+        background: var(--background-primary) !important;
+    }
+
+    i {
+        color: var(--green) !important;
+    }
+
+    div .sectiontitle h2 {
+        color: var(--green) !important;
+    }
+
+    .sectiontitle::after {
+        background: var(--green) !important;
+    }
+
+    h2 span {
+        color: var(--text) !important;
+    }
+
+    h2 strong,
+    h5 strong {
+        color: var(--orange) !important;
+    }
+
+    h5 span {
+        color: var(--text) !important;
+    }
+
+    p,
+    p span {
+        color: var(--text) !important;
+    }
+
+    .section {
+        background: var(--background-primary) !important;
+        color: var(--text) !important;
+    }
+
+    .main:hover {
+        background: var(--background-primary) !important;
+    }
+
+    .activityname a {
+        color: var(--cyan) !important;
+    }
+
+    div .activity:not(.modtype_label) .activity-item {
+        border: 1px solid var(--purple) !important;
+    }
+
+    div .activity:hover {
+        background: var(--background-primary) !important;
+    }
+
+    div .activity:not(.modtype_label) .activity-item:hover,
+    div .activity:not(.modtype_label):hover .activity-altcontent {
+        background: var(--subtle-text) !important;
+    }
+
+    .resourcelinkdetails {
+        color: var(--purple) !important;
+    }
 }
 
-#theme_boost-drawers-blocks .card-body {
-    background: var(--background-primary);
-}
+@-mox-document url-prefix("https://vlesligo.atu.ie/mod/assign/") {
+    body {
+        background: var(--background-secondary);
+        color: var(--text) !important;
+    }
 
-#theme_boost-drawers-blocks .card-text {
-    color: var(--foreground);
-}
+    body a {
+        color: var(--cyan) !important;
+    }
 
-#theme_boost-drawers-blocks h5 {
-    color: var(--foreground);
-}
+    .h2,
+    h3 {
+        color: var(--green) !important;
+    }
+    #topofscroll {
+        background: var(--background-primary) !important;
+    }
 
-#theme_boost-drawers-blocks h5 .notifysuccess {
-    color: var(--green);
-}
+    #region-main {
+        background: var(--background-primary) !important;
+    }
 
-#theme_boost-drawers-blocks a {
-    color: var(--cyan);
-}
+    .activity-header {
+        background: var(--background-primary) !important;
+    }
 
-/* Side Drawer Calender */
-.current {
-    color: var(--green) !important;
+    tr,
+    .submissionnotgraded {
+        color: var(--text) !important;
+    }
+
+    ::placeholder {
+        color: var(--purple) !important;
+    }
+
+    textarea {
+        background: var(--background-primary) !important;
+        border: 1px solid var(--purple) !important;
+        color: var(--text) !important;
+    }
+
+    textarea:focus {
+        border: 1px solid var(--cyan) !important;
+    }
 }
